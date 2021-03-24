@@ -55,16 +55,16 @@ main() async {
 
 # Wordlists
 
-* [English](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/english.dart)
-* [Japanese](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/japanese.dart)
-* [Korean](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/korean.dart)
-* [Spanish](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/spanish.dart)
-* [Chinese (Simplified)](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/chinese_simplified.dart)
-* [Chinese (Traditional)](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/chinese_traditional.dart)
-* [French](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/french.dart)
-* [Italian](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/italian.dart)
-* [Czech](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/czech.dart)
-* [Portuguese](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/portuguese.dart)
+* [English](english.dart)
+* [Japanese](japanese.dart)
+* [Korean](korean.dart)
+* [Spanish](spanish.dart)
+* [Chinese (Simplified)](chinese_simplified.dart)
+* [Chinese (Traditional)](chinese_traditional.dart)
+* [French](french.dart)
+* [Italian](italian.dart)
+* [Czech](czech.dart)
+* [Portuguese](portuguese.dart)
 
 ## Wordlists (Special Considerations)
 
