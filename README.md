@@ -55,7 +55,7 @@ main() async {
 
 # Wordlists
 
-* [English](english.dart)
+* [English](https://github.com/softwareboy92/bitcion_bip39/tree/master/lib/src/wordlists/english.dart)
 * [Japanese](japanese.dart)
 * [Korean](korean.dart)
 * [Spanish](spanish.dart)
