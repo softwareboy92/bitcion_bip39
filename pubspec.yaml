@@ -1,8 +1,8 @@
 name: bip39_words
 description: "Dart implementation of Bitcoin BIP39: Mnemonic code for generating deterministic keys  Convert from bitcoinjs/bip39"
 version: 0.0.1
-author:
-homepage:
+author: lvzhongdi
+homepage: https://github.com/softwareboy92/bitcion_bip39.git
 
 environment:
   sdk: ">=2.12.0 <3.0.0"

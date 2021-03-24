@@ -1,8 +1,8 @@
 # bip39_words
 
-Dart implementation of [Bitcoin BIP39](): Mnemonic code for generating deterministic keys
+Dart implementation of [Bitcoin BIP39](https://github.com/softwareboy92/bitcion_bip39.git): Mnemonic code for generating deterministic keys
 
-Convert from [bitcoinjs/bip39]()
+Convert from [bitcoinjs/bip39](https://github.com/softwareboy92/bitcion_bip39.git)
 
 ## Reminder for developers
 
@@ -34,42 +34,37 @@ bip39.validateMnemonic('basket actual',CHINESE_SIMOLIFIED_LIST)
 
 
 ``` dart
-import 'package:bip39/bip39.dart' as bip39;
+import 'package:bip39_words/bip39.dart' as bip39;
+import 'package:bip39_words/src/wordlists/chinese_simplified.dart';
 
-main() {
-    // Only support BIP39 English word list
-    // uses HEX strings for entropy
-    String randomMnemonic = await bip39.generateMnemonic();
-
-    String seed = bip39.mnemonicToSeedHex("update elbow source spin squeeze horror world become oak assist bomb nuclear");
-    // => '77e6a9b1236d6b53eaa64e2727b5808a55ce09eb899e1938ed55ef5d4f8153170a2c8f4674eb94ce58be7b75922e48e6e56582d806253bd3d72f4b3d896738a4'
-    
-    String mnemonic = await bip39.entropyToMnemonic('00000000000000000000000000000000');
-    // => 'abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about'
-    
-    bool isValid = await bip39.validateMnemonic(mnemonic);
-    // => true
-    
-    isValid = await bip39.validateMnemonic('basket actual');
-    // => false
-    
-    String entropy = bip39.mnemonicToEntropy(mnemonic)
-    // => String '00000000000000000000000000000000'
+main() async {
+  String randomMnemonic = bip39.generateMnemonic(CHINESE_SIMOLIFIED_LIST);
+  print(randomMnemonic);
+  String seed = bip39.mnemonicToSeedHex("党 加 针 建 腐 灯 仇 宜 卫 壳 卖 彻");
+  print(seed);
+  String mnemonic = bip39.entropyToMnemonic('00000000000000000000000000000000',CHINESE_SIMOLIFIED_LIST);
+  print(mnemonic);
+  bool isValid = bip39.validateMnemonic(mnemonic,CHINESE_SIMOLIFIED_LIST);
+  print(isValid);
+  isValid = bip39.validateMnemonic('basket actual',CHINESE_SIMOLIFIED_LIST);
+  print(isValid);
+  String entropy = bip39.mnemonicToEntropy(mnemonic,CHINESE_SIMOLIFIED_LIST);
+  print(entropy);
 }
 ```
 
 # Wordlists
 
-* [English](english.dart)
-* [Japanese](japanese.dart)
-* [Korean](korean.dart)
-* [Spanish](spanish.dart)
-* [Chinese (Simplified)](chinese_simplified.dart)
-* [Chinese (Traditional)](chinese_traditional.dart)
-* [French](french.dart)
-* [Italian](italian.dart)
-* [Czech](czech.dart)
-* [Portuguese](portuguese.dart)
+* [English](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/english.dart)
+* [Japanese](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/japanese.dart)
+* [Korean](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/korean.dart)
+* [Spanish](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/spanish.dart)
+* [Chinese (Simplified)](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/chinese_simplified.dart)
+* [Chinese (Traditional)](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/chinese_traditional.dart)
+* [French](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/french.dart)
+* [Italian](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/italian.dart)
+* [Czech](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/czech.dart)
+* [Portuguese](https://github.com/softwareboy92/bitcion_bip39/blob/master/lib/src/wordlists/portuguese.dart)
 
 ## Wordlists (Special Considerations)
 
